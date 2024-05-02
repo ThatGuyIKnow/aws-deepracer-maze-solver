@@ -243,6 +243,36 @@ class QRDetectionNode(Node):
                 self.ongoing_action = valid_detection_delta
 
         return qr_json_detected
+    
+    def get_qr_coords(self, camera_matrix, distortion_matrix, ret_qr, marker_size):
+        return [self._get_qr_coords(camera_matrix, distortion_matrix, qr, marker_size) for qr in ret_qr]
+
+    def _get_qr_coords(self, camera_matrix, distortion_matrix, ret_qr, marker_size):
+
+        # Convert corner points to np array from polygon
+        points = np.array(ret_qr.polygon)[None, :, :].astype(np.float32)
+        
+        #Corner coordinates
+        edges = np.array([[0.,0.,0.],
+                        [1.,0.,0.],
+                        [1.,1.,0.],
+                        [0.,1.,0.]])[:, None, :] * marker_size
+
+        #perspective-to-point solving using opencv
+        ret, rvec, tvec = cv2.solvePnP(edges, points, camera_matrix, distortion_matrix)
+
+        if ret:
+            #For projecting to camera view
+            unitv_points = np.array([[0.,0.,0.], [1.,0.,0.], [0.,1.,0.], [0.,0.,1.]])[:, None, :]
+            points, _ = cv2.projectPoints(unitv_points, rvec, tvec, camera_matrix, distortion_matrix)
+            #Conversion from rotation matrix to rotation vector
+            rvec, _ = cv2.Rodrigues(rvec)
+            return points, rvec, tvec
+        # if nothing is found
+        return [], [], []
+
+    def get_camera_position(self, tvec, rvec):
+        return -rvec.transpose() @ tvec
 
     def decode_qr(self, image):
         """Method that decodes the QR from input image and returns the
