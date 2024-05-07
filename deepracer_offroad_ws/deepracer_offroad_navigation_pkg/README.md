@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AWS DeepRacer Offroad navigation ROS package creates the `deepracer_offroad_navigation_node` which decides the action or controller message to send out using the normalized detection error (delta) received from `qr_detection_node`. For more information about the AWS DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project).
+The AWS DeepRacer Offroad navigation ROS package creates the `deepracer_offroad_navigation_node` which decides the action or controller message to send out using the normalized detection error (delta) received from `qr_detection_node`. For more information about the AWS DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver).
 
 ## License
 
@@ -43,7 +43,7 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 
 1. Clone the entire AWS DeepRacer Offroad sample project on the DeepRacer device:
 
-        git clone https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project.git
+        git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
         cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
 
 1. Fetch unreleased dependencies:
@@ -132,4 +132,4 @@ A launch file called `deepracer_offroad_navigation_pkg_launch.py` is included in
 ## Resources
 
 * [Getting started with AWS DeepRacer OpenSource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
+* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)

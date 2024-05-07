@@ -1,6 +1,6 @@
 # Getting started with the AWS DeepRacer Offroad sample project
 
-The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application that adds additional capability to the AWS DeepRacer device to autonomously navigate through a path of QR codes by decoding the information in them. Explore the AWS DeepRacer Offroad sample project by cloning the [aws-deepracer-offroad-sample-project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project) and get started using the provided [DeepRacer Offroad launcher package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher).
+The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application that adds additional capability to the AWS DeepRacer device to autonomously navigate through a path of QR codes by decoding the information in them. Explore the AWS DeepRacer Offroad sample project by cloning the [aws-deepracer-offroad-sample-project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver) and get started using the provided [DeepRacer Offroad launcher package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher).
 
 
 ## Overview
@@ -31,7 +31,7 @@ The following additional information is encoded in the preceding JSON object.
 
 1. **Limit the ongoing action (limit)**: This is a positive integer value [1, infinity] which enables you to set a threshold for the number of image frames captured by the AWS DeepRacer's camera before it changes from the ongoing action, initiated by the `action_start` waypoint, to its previous action. Once `action_start` begins, as AWS DeepRacer runs the ongoing action, it counts image frames until it reaches the threshold you’ve set. Then, the car reverts to its previous action, which can be whatever you set it to be. For example, if the previous action is `stop` and the ongoing action with a limit is `go_straight`, the AWS DeepRacer goes straight until the limit is reached and then stops. 
 
-Setting these track edge and special actions in a series allows you to create a custom path for the AWS DeepRacer to follow. The `qr_detection_node` handles the handoff between the waypoints as the AWS DeepRacer goes past the waypoint codes. To learn more about how to create or extend the QR codes for your use case, use the [sample guide](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/create-qrcodes-to-setup-offroad-path.md) and invent your track!
+Setting these track edge and special actions in a series allows you to create a custom path for the AWS DeepRacer to follow. The `qr_detection_node` handles the handoff between the waypoints as the AWS DeepRacer goes past the waypoint codes. To learn more about how to create or extend the QR codes for your use case, use the [sample guide](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/create-qrcodes-to-setup-offroad-path.md) and invent your track!
 
 
 ## How does it work?
@@ -68,17 +68,17 @@ The Offroad sample project is built to work on an AWS DeepRacer device with a si
 
 There are six packages (ROS nodes) that are of importance for the AWS DeepRacer Offroad sample project.
  
-1. [QR detection package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/qr_detection_pkg): This package is responsible for detecting QR codes from the camera sensor images and calculating the error (delta) in displacement of the QR code reference point from the target position to be provided to the AWS DeepRacer Offroad navigation.
+1. [QR detection package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/qr_detection_pkg): This package is responsible for detecting QR codes from the camera sensor images and calculating the error (delta) in displacement of the QR code reference point from the target position to be provided to the AWS DeepRacer Offroad navigation.
 
-1. [AWS DeepRacer Offroad navigation package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/deepracer_offroad_navigation_pkg): This package is responsible for collecting the delta results from QR detection and mapping them to the servo message with throttle and steering angle values.
+1. [AWS DeepRacer Offroad navigation package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_offroad_navigation_pkg): This package is responsible for collecting the delta results from QR detection and mapping them to the servo message with throttle and steering angle values.
 
-1. [AWS DeepRacer Offroad launcher package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher): This package is responsible for launching all the required nodes for the AWS DeepRacer Offroad sample project, including the launch setup for nodes from the AWS DeepRacer core application.
+1. [AWS DeepRacer Offroad launcher package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher): This package is responsible for launching all the required nodes for the AWS DeepRacer Offroad sample project, including the launch setup for nodes from the AWS DeepRacer core application.
 
-1. [Control package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/ctrl_pkg): This package is extended from the AWS DeepRacer core application and responsible for creating the main node with services exposed to be used by webserver backend API calls. It manages the mode of the car: `manual`, `autonomous`, `calibration`, or `offroad`.
+1. [Control package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/ctrl_pkg): This package is extended from the AWS DeepRacer core application and responsible for creating the main node with services exposed to be used by webserver backend API calls. It manages the mode of the car: `manual`, `autonomous`, `calibration`, or `offroad`.
 
-1. [AWS DeepRacer interfaces package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/deepracer_interfaces_pkg): This package is a foundational package that creates the custom service and message types that are used in the AWS Deepracer Offroad sample project.
+1. [AWS DeepRacer interfaces package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_interfaces_pkg): This package is a foundational package that creates the custom service and message types that are used in the AWS Deepracer Offroad sample project.
 
-1. [Webserver package](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/tree/main/deepracer_offroad_ws/webserver_pkg): This package is extended from AWS DeepRacer core application and responsible for creating a collection of FLASK APIs that are called from the front end. These APIs call the required ROS services and return the result to the front end required for the AWS Deepracer Offroad sample project to interact with the device console.
+1. [Webserver package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/webserver_pkg): This package is extended from AWS DeepRacer core application and responsible for creating a collection of FLASK APIs that are called from the front end. These APIs call the required ROS services and return the result to the front end required for the AWS Deepracer Offroad sample project to interact with the device console.
 
 
 ## Offroad mode:
@@ -196,4 +196,4 @@ The AWS DeepRacer Offroad sample project leverages most of the concepts used in 
 ## Resources
 
 * [Getting started with AWS DeepRacer OpeSource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Create QR codes to set up an Offroad path](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/create-qrcodes-to-setup-offroad-path.md)
+* [Create QR codes to set up an Offroad path](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/create-qrcodes-to-setup-offroad-path.md)

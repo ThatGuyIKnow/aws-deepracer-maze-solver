@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer core application. It uses QR code detection to identify and navigate through a path set up using QR codes to guide the AWS DeepRacer device. For detailed information on the AWS DeepRacer Offroad sample project, see the AWS DeepRacer Offroad sample project [Getting started](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md) section.
+The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer core application. It uses QR code detection to identify and navigate through a path set up using QR codes to guide the AWS DeepRacer device. For detailed information on the AWS DeepRacer Offroad sample project, see the AWS DeepRacer Offroad sample project [Getting started](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md) section.
 
 The AWS DeepRacer Offroad project requires a series of QR codes to be set up on the floor in order to create an “Offroad” track for the DeepRacer to navigate.
 
@@ -93,7 +93,7 @@ In the preceding image, the pink line connects the `REFERENCE POINTS` calculated
 ## Resources
 
 * [Pure Python QR code generator](https://pypi.org/project/qrcode)
-* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
+* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)
 
 
 

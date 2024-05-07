@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AWSDeepRacer control ROS package creates the `ctrl_node`, which is part of the AWS DeepRacer Offroad sample project and is launched from the `deepracer_offroad_launcher`. This package was extended and modified from the AWS DeepRacer control ROS package developed for the core application. For more information about the AWS DeepRacer Offroad sample project, see the [DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project).
+The AWSDeepRacer control ROS package creates the `ctrl_node`, which is part of the AWS DeepRacer Offroad sample project and is launched from the `deepracer_offroad_launcher`. This package was extended and modified from the AWS DeepRacer control ROS package developed for the core application. For more information about the AWS DeepRacer Offroad sample project, see the [DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver).
 
 This is the main node with services exposed to be used by webserver backend API calls. This node in the AWS DeepRacer application manages the different modes of the device (`manual`, `autonomous`, and `calibration`). It allows us to maintain the device in a single mode at any point of time so that overlapping functionalities (such as servo messages) do not conflict with each other. In this package, an additional `offroad` mode has been added to support the AWS DeepRacer Offroad sample project.
 
@@ -51,7 +51,7 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
-        git clone https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project.git
+        git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
         cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
 
 1. Fetch unreleased dependencies:
@@ -169,4 +169,4 @@ The `ctrl_node` provides the core functionality to manage the device's different
 ## Resources
 
 * [Getting started with AWS DeepRacer OpenSource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
+* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)

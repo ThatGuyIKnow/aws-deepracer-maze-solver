@@ -2,7 +2,7 @@
 
 ## Overview
 
-The QR detection ROS package creates the `qr_detection_node`, which is responsible for collecting sensor data (camera images) from `sensor_fusion_pkg` to decode detected QR codes and calculate the error (delta) in displacement of the QR code reference point from the target position to be provided to the navigation. This delta value is published using a ROS publisher as `DetectionDeltaMsg` data. For more information about the DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project).
+The QR detection ROS package creates the `qr_detection_node`, which is responsible for collecting sensor data (camera images) from `sensor_fusion_pkg` to decode detected QR codes and calculate the error (delta) in displacement of the QR code reference point from the target position to be provided to the navigation. This delta value is published using a ROS publisher as `DetectionDeltaMsg` data. For more information about the DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver).
 
 ## License
 
@@ -44,7 +44,7 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
-        git clone https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project.git
+        git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
         cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
 
 1. Clone the `async_web_server_cpp`, `web_video_server`, `rplidar_ros`, and `pyzbar` dependency packages on the AWS DeepRacer device:
@@ -134,5 +134,5 @@ A launch file called `qr_detection_pkg_launch.py` is included in this package th
 ## Resources
 
 * [Getting started with AWS DeepRacer OpenSource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Getting started with the AWS DeepRacer Offroad](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
-* [Instructions for creating QR codes to set up the Offroad path](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/create-qrcodes-to-setup-offroad-path.md)
+* [Getting started with the AWS DeepRacer Offroad](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)
+* [Instructions for creating QR codes to set up the Offroad path](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/create-qrcodes-to-setup-offroad-path.md)

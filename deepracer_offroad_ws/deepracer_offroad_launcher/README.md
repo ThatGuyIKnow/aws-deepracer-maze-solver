@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application to identify and navigate the AWS DeepRacer device through a path set up using QR codes to guide it. For detailed information about the DeepRacer Offroad sample project, see the AWS DeepRacer Offroad sample project [Getting started](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md) section.
+The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application to identify and navigate the AWS DeepRacer device through a path set up using QR codes to guide it. For detailed information about the DeepRacer Offroad sample project, see the AWS DeepRacer Offroad sample project [Getting started](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md) section.
 
 ## License
 
@@ -48,7 +48,7 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
-        git clone https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project.git
+        git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
         cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
 
 1. Clone the `async_web_server_cpp`, `web_video_server`, `plidar_ros`, and `pyzbar` dependency packages on the AWS DeepRacer device:
@@ -330,6 +330,6 @@ The `deepracer_offroad_launcher.py`, included in this package, is the main launc
 ## Resources
 
 * [Getting started with AWS DeepRacer OpenSource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Getting started with the DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
-* [Instructions for creating QR codes to set up the Offroad path](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/create-qrcodes-to-setup-offroad-path.md)
+* [Getting started with the DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)
+* [Instructions for creating QR codes to set up the Offroad path](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/create-qrcodes-to-setup-offroad-path.md)
 * [Instructions for calibrating your AWS DeepRacer](https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-calibrate-vehicle.html)

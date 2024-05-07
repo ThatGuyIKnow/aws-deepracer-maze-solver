@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AWS DeepRacer Web Server ROS package creates the `web_publisher_node` which is part of the AWS DeepRacer Offroad sample project and is launched from the `deepracer_offroad_launcher`. For more information about the AWS DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project).
+The AWS DeepRacer Web Server ROS package creates the `web_publisher_node` which is part of the AWS DeepRacer Offroad sample project and is launched from the `deepracer_offroad_launcher`. For more information about the AWS DeepRacer Offroad sample project, see [DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver).
 
 This node launches a Flask application as a background thread and creates service clients and subscribers for all the services and topics that are required by the APIs called from the AWS DeepRacer vehicle console. This node acts as an interface between the AWS DeepRacer device console and the backend ROS services. This node was extended to provide more functionalities required for the DeepRacer Offroad sample project.
 
@@ -46,7 +46,7 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
-        git clone https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project.git
+        git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
         cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
 
 1. Fetch unreleased dependencies:
@@ -158,4 +158,4 @@ The `webserver_publisher_node` provides the core functionality to launch the FLA
 ## Resources
 
 * [Getting started with AWS DeepRacer Opensource](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
-* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/aws-deepracer/aws-deepracer-offroad-sample-project/blob/main/getting-started.md)
+* [Getting started with the AWS DeepRacer Offroad sample project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/blob/main/getting-started.md)
