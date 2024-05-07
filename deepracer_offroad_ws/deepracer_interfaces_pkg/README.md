@@ -45,15 +45,15 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
         git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Resolve the dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && rosdep install -i --from-path . --rosdistro foxy -y
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && rosdep install -i --from-path . --rosdistro foxy -y
 
 1. Build the `deepracer_interfaces_pkg`:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && colcon build --packages-select deepracer_interfaces_pkg
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && colcon build --packages-select deepracer_interfaces_pkg
 
 ## Resources
 

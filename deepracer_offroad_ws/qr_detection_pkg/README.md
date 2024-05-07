@@ -45,25 +45,25 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
         git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Clone the `async_web_server_cpp`, `web_video_server`, `rplidar_ros`, and `pyzbar` dependency packages on the AWS DeepRacer device:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && ./install_dependencies.sh
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && ./install_dependencies.sh
 
 1. Fetch unreleased dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
         rosws update
 
 1. Resolve the dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && apt-get update
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && apt-get update
         rosdep install -i --from-path . --rosdistro foxy -y
 
 1. Build the `qr_detection_pkg` and `deepracer_interfaces_pkg`:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && colcon build --packages-select qr_detection_pkg deepracer_interfaces_pkg
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && colcon build --packages-select qr_detection_pkg deepracer_interfaces_pkg
 
 
 ## Usage
@@ -80,7 +80,7 @@ To launch the built `qr_detection_node` as the root user on the AWS DeepRacer de
 
 1. Navigate to the AWS DeepRacer Offroad workspace:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Source the ROS 2 Foxy setup bash and OpenVINO bash script:
 
@@ -89,7 +89,7 @@ To launch the built `qr_detection_node` as the root user on the AWS DeepRacer de
 
 1. Source the setup script for the installed packages:
 
-        source ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/install/setup.bash 
+        source ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/install/setup.bash 
 
 1. Launch the `qr_detection_node` using the launch script:
 

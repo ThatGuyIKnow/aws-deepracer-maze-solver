@@ -52,24 +52,24 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
         git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Clone the `async_web_server_cpp`, `web_video_server`, `rplidar_ros`, and `pyzbar dependency` packages on the AWS DeepRacer device:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && ./install_dependencies.sh
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && ./install_dependencies.sh
 
 1. Fetch unreleased dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
         rosws update
 
 1. Resolve the dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && rosdep install -i --from-path . --rosdistro foxy -y
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && rosdep install -i --from-path . --rosdistro foxy -y
 
 1. Build the packages in the workspace:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && colcon build
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && colcon build
 
 
 ## Usage
@@ -93,7 +93,7 @@ To launch the AWS DeepRacer Offroad sample application as the root user on the A
 
 1. Source the setup script for the installed packages:
 
-        source ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/install/setup.bash
+        source ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/install/setup.bash
 
 1. Launch the nodes required for the AWS DeepRacer Offroad sample project:
 
@@ -111,7 +111,7 @@ Once the `deepracer_offroad_launcher` has been kicked off, open an adjacent new 
 
 1. Navigate to the AWS DeepRacer Offroad workspace:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Source the ROS 2 Foxy setup bash script:
 
@@ -119,7 +119,7 @@ Once the `deepracer_offroad_launcher` has been kicked off, open an adjacent new 
 
 1. Source the setup script for the installed packages:
 
-        source ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/install/setup.bash
+        source ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/install/setup.bash
 
 1. Set the mode of the AWS DeepRacer via `ctrl_pkg` to `offroad` using the following ROS 2 service call:
 
@@ -139,7 +139,7 @@ The `MAX_SPEED` scale of the AWS DeepRacer can be modified using an ROS 2 servic
 
 1. Navigate to the AWS DeepRacer Offroad workspace:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Source the ROS 2 Foxy setup bash script:
 
@@ -147,7 +147,7 @@ The `MAX_SPEED` scale of the AWS DeepRacer can be modified using an ROS 2 servic
 
 1. Source the setup script for the installed packages:
 
-        source ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/install/setup.bash
+        source ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/install/setup.bash
 
 1. Change the MAX SPEED to xx% of the MAX Scale:
 

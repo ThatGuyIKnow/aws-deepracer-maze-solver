@@ -1,6 +1,6 @@
 # Getting started with the AWS DeepRacer Offroad sample project
 
-The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application that adds additional capability to the AWS DeepRacer device to autonomously navigate through a path of QR codes by decoding the information in them. Explore the AWS DeepRacer Offroad sample project by cloning the [aws-deepracer-offroad-sample-project](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver) and get started using the provided [DeepRacer Offroad launcher package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher).
+The AWS DeepRacer Offroad sample project is a sample application built on top of the existing AWS DeepRacer application that adds additional capability to the AWS DeepRacer device to autonomously navigate through a path of QR codes by decoding the information in them. Explore the AWS DeepRacer Offroad sample project by cloning the [aws-deepracer-maze-solver](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver) and get started using the provided [DeepRacer Offroad launcher package](https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver/tree/main/deepracer_offroad_ws/deepracer_offroad_launcher).
 
 
 ## Overview

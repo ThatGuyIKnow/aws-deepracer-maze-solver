@@ -52,21 +52,21 @@ Open a terminal on the AWS DeepRacer device and run the following commands as th
 1. Clone the entire AWS DeepRacer Offroad sample project on the AWS DeepRacer device:
 
         git clone https://github.com/ThatGuyIKnow/aws-deepracer-maze-solver.git
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Fetch unreleased dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
         rosws update
 
 1. Resolve the dependencies:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && apt-get update
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && apt-get update
         rosdep install -i --from-path . --rosdistro foxy -y
 
 1. Build the `ctrl_pkg`, `camera_pkg`, `servo_pkg`, `inference_pkg`, `model_optimizer_pkg`, `deepracer_navigation_pkg`, and `deepracer_interfaces_pkg`:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/ && colcon build --packages-select ctrl_pkg camera_pkg servo_pkg inference_pkg model_optimizer_pkg deepracer_navigation_pkg deepracer_interfaces_pkg
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/ && colcon build --packages-select ctrl_pkg camera_pkg servo_pkg inference_pkg model_optimizer_pkg deepracer_navigation_pkg deepracer_interfaces_pkg
 
 
 ## Usage
@@ -83,7 +83,7 @@ To launch the built `ctrl_node` as the root user on the AWS DeepRacer device, op
 
 1. Navigate to the AWS DeepRacer Offroad workspace:
 
-        cd ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/
+        cd ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/
 
 1. Source the ROS 2 Foxy setup bash script:
 
@@ -91,7 +91,7 @@ To launch the built `ctrl_node` as the root user on the AWS DeepRacer device, op
 
 1. Source the setup script for the installed packages:
 
-        source ~/deepracer_ws/aws-deepracer-offroad-sample-project/deepracer_offroad_ws/install/setup.bash 
+        source ~/deepracer_ws/aws-deepracer-maze-solver/deepracer_offroad_ws/install/setup.bash 
 
 1. Launch the `ctrl_node` using the launch script:
 
