@@ -248,10 +248,10 @@ The `deepracer_offroad_launcher.py`, included in this package, is the main launc
                 name='model_optimizer_node'
             )
             rplidar_node = Node(
-                package='rplidar_ros2',
+                package='rplidar_ros',
                 namespace='rplidar_ros',
-                executable='rplidar_scan_publisher',
-                name='rplidar_scan_publisher',
+                executable='rplidar_node',
+                name='rplidar_node',
                 parameters=[{
                         'serial_port': '/dev/ttyUSB0',
                         'serial_baudrate': 115200,
